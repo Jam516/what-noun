@@ -21,8 +21,8 @@ export async function getNoun(form?: string) {
         result = {
           avatar: res.fields.avatar,
           description: res.fields.description,
+          title: res.fields.title,
           url: res.fields.Status[0].url,
-          // url: res.fields.Status[0].url,
         };
       }
     }
@@ -30,8 +30,8 @@ export async function getNoun(form?: string) {
       result = result = {
         avatar: data[0].fields.avatar,
         description: data[0].fields.description,
-        url: data[0].fields.url,
-        // url: data[0].fields.Status[0].url,
+        title: data[0].fields.title,
+        url: data[0].fields.Status[0].url,
       };
     }
     return result;

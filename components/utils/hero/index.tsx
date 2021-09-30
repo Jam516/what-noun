@@ -17,6 +17,7 @@ function Hero(): JSX.Element {
     description: "",
     avatar: "",
     url: "",
+    title: "",
   });
   useEffect(() => {
     //check submit and fetch
@@ -26,6 +27,7 @@ function Hero(): JSX.Element {
           description: res.description,
           avatar: res.avatar,
           url: res.url,
+          title: res.title,
         });
       });
       //Reset
@@ -50,7 +52,9 @@ function Hero(): JSX.Element {
         <h1>Which Noun are you?</h1>
         <div className={styles.description}>
           {data.description !== "" && <p>{data.description}</p>}
-          {data.url !== "" && <p>{data.url}</p>}
+        </div>
+        <div className={styles.title}>
+          {data.title !== "" && <p>{data.title}</p>}
         </div>
         <Form
           submit={() => submit()}
