@@ -1,0 +1,28 @@
+.container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+}
+.content {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  
+}
+.header {
+  height: 100px;
+  display: flex;
+  padding: 12px 0;
+  width: 100%;
+  justify-content: center;
+
+  position: absolute;
+  .logo {
+    width: 75px;
+    height: 75px;
+    svg {
+      width: 75px;
+      height: 75px;
+    }
+  }
+}
