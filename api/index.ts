@@ -17,12 +17,13 @@ export async function getNoun(form?: string) {
     // setting data entry
     let result;
     for (const res of data) {
-      if (res.fields.adress === form) {
+      if (res.fields.wallet === form) {
         result = {
           avatar: res.fields.avatar,
           description: res.fields.description,
           title: res.fields.title,
-          url: res.fields.Status[0].url,
+          // url: res.fields.status[0].url,
+          url: res.fields.status,
         };
       }
     }
@@ -31,7 +32,8 @@ export async function getNoun(form?: string) {
         avatar: data[0].fields.avatar,
         description: data[0].fields.description,
         title: data[0].fields.title,
-        url: data[0].fields.Status[0].url,
+        // url: data[0].fields.status[0].url,
+        url: res.fields.status[0],
       };
     }
     return result;
