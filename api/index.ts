@@ -9,30 +9,25 @@ export async function getNoun(form?: string) {
   //param form is equal var Form on Hero component
 
   try {
-    var getrequest = "/Sheet1?search={\"wallet\":\""+ form +"\"}"
+    const API_URL = '/Sheet1?search={"wallet":"' + form + '"}';
+    let result;
 
-    const data = await axios
-      .get(getrequest);
-    // setting data entry
-    // let result;
-    if (data.wallet === form) {
+    const data = await axios.get(API_URL);
+    if (data.data.wallet === form) {
       result = {
-        description: data.description,
-        title: data.title,
-        // url: res.fields.status[0].url,
-        url: data.status,
+        description: data.data.description,
+        title: data.data.title,
+        url: data.data.status,
       };
     }
-
-    // if (result === undefined) {
-    //   result = result = {
-    //     description: data[0].description,
-    //     title: data[0].title,
-    //     // url: data[0].fields.status[0].url,
-    //     url: res.status[0],
-    //   };
-    // }
-    // return result;
+    if (result === undefined) {
+      result = result = {
+        description: data.data[0].description,
+        title: data.data[0].title,
+        url: data.data[0].status,
+      };
+    }
+    return result;
   } catch (err) {
     console.log(err);
   }
