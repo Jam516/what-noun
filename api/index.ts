@@ -1,17 +1,14 @@
 import axios from "axios";
 //INSERT YOUR BASE ID AND TABLE
-//EXAMPLE https://api.airtable.com/v0/BASE_ID/table/
 axios.defaults.baseURL =
   "https://api.steinhq.com/v1/storages/6158d04447873c2b735e69b4/";
-//INSERT YOUR KEY API
-// axios.defaults.headers["Authorization"] = "Bearer keye0U1hl/json";
+
 export async function getNoun(form?: string) {
   //param form is equal var Form on Hero component
 
   try {
     const API_URL = '/Sheet1?search={"wallet":"' + form + '"}';
     let result;
-
     const data = await axios.get(API_URL);
     if (data.data.wallet === form) {
       result = {
