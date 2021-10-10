@@ -8,7 +8,7 @@ function Form(props: {submit: Function; handleForm: Function}): JSX.Element {
   return (
     <div className={styles.form}>
       <Text
-        placeholder="insert your adress"
+        placeholder="Wallet Address"
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleForm(e)}
         name="text"
       />

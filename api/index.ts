@@ -1,7 +1,7 @@
 import axios from "axios";
 //INSERT YOUR BASE ID AND TABLE
 axios.defaults.baseURL =
-  "https://api.steinhq.com/v1/storages/6158d04447873c2b735e69b4/";
+  "https://api.steinhq.com/v1/storages/6161609785151023ac168f65";
 
 export async function getNoun(form?: string) {
   //param form is equal var Form on Hero component
@@ -19,9 +19,9 @@ export async function getNoun(form?: string) {
     }
     if (result === undefined) {
       result = result = {
-        description: data.data[0].description,
-        title: data.data[0].title,
-        url: data.data[0].status,
+        description: 'Sorry',
+        title: 'Couldnt find you in the database',
+        url: 'https://dl.airtable.com/.attachments/83427991309b5ec93e5ce5467959db2f/5826c3c1/nounEmpty2.PNG',
       };
     }
     return result;

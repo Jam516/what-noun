@@ -2,17 +2,21 @@ import styles from "./styles.module.scss";
 import { memo } from "react";
 import Image from "next/image";
 import NounExample from "components/examples/noun";
-import nounExample2 from "public/nounEmpty.png";
+import nounExample2 from "public/nounEmpty2.png";
 function Avatar(props: { data: { avatar: string; url: string } }): JSX.Element {
   const { data } = props;
   return (
     <div className={styles.containerAvatar}>
       <div className={styles.avatar}>
         {data.url === "" ? (
-          <NounExample />
+          <Image
+            width="284px"
+            height="360px"
+            src={nounExample2}
+          />
         ) : (
           <Image
-            width="360px"
+            width="284px"
             height="360px"
             alt={data.avatar}
             src={data.url !== "" ? data.url : nounExample2}
