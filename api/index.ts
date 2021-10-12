@@ -18,7 +18,7 @@ export async function getNoun(form?: string) {
       };
       // console.log(result)
     }
-    if (result === undefined) {
+    else {
       result = result = {
         description: 'Sorry',
         title: 'Couldnt find you in the database',
