@@ -8,6 +8,7 @@ interface dataAirtable {
   avatar: string;
   description: string;
   url: string;
+  title: string;
 }
 function Hero(): JSX.Element {
   const [buttonSend, setButtonSend] = useState(false);
