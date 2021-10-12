@@ -1,21 +1,22 @@
 import axios from "axios";
 //INSERT YOUR BASE ID AND TABLE
 axios.defaults.baseURL =
-  "https://api.steinhq.com/v1/storages/6161609785151023ac168f65";
+  "https://sheet.best/api/sheets/ab363473-b726-49f0-b4d7-faeac379e54c/wallet";
 
 export async function getNoun(form?: string) {
   //param form is equal var Form on Hero component
 
   try {
-    const API_URL = '/Sheet1?search={"wallet":"' + form + '"}';
+    const API_URL = '/' + form;
     let result;
     const data = await axios.get(API_URL);
-    if (data.data.wallet === form) {
+    if (data.data[0].wallet === form) {
       result = {
-        description: data.data.description,
-        title: data.data.title,
-        url: data.data.status,
+        description: data.data[0].description,
+        title: data.data[0].title,
+        url: data.data[0].status,
       };
+      // console.log(result)
     }
     if (result === undefined) {
       result = result = {
