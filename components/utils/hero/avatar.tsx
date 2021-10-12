@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 import { memo } from "react";
 import Image from "next/image";
 import NounExample from "components/examples/noun";
-import nounExample2 from "public/nounEmpty2.png";
+import nounExample2 from "public/nounEmpty2.PNG";
 function Avatar(props: { data: { avatar: string; url: string } }): JSX.Element {
   const { data } = props;
   return (
