@@ -9,6 +9,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Nouns</title>
       </Head>
+      <NFTFullPage id="5730" />;
       <Hero />
       <div className="temporalContent">
         <h2>
@@ -18,7 +19,6 @@ const Home: NextPage = () => {
           Built by NiftyTable
         </h3>
       </div>
-      <NFTFullPage id="5730" />;
       <style jsx>{`
         .temporalContent {
           display: grid;
