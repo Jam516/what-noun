@@ -1,6 +1,7 @@
 import type {NextPage} from 'next';
 import Hero from 'components/utils/hero';
 import Head from 'next/head';
+import { NFTFullPage } from "@zoralabs/nft-components";
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
           Built by NiftyTable
         </h3>
       </div>
+      <NFTFullPage id="5730" />;
       <style jsx>{`
         .temporalContent {
           display: grid;
